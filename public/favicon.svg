@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#141e33" />
+      <stop offset="60%" stop-color="#090e1b" />
+      <stop offset="100%" stop-color="#04060d" />
+    </radialGradient>
+    
+    <!-- Outer Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="45%" stop-color="#22d3ee" />
+      <stop offset="80%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <!-- Gold Cap Diamond Gradient -->
+    <linearGradient id="capGold" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#fef08a" />
+      <stop offset="55%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+
+    <!-- Cap Base Gradient -->
+    <linearGradient id="capBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#92400e" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+
+    <!-- Tassel Gradient -->
+    <linearGradient id="tasselGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <!-- Glow Filter for celestial runes -->
+    <filter id="celestialGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Container rounded squircle for crystal-clear contrast on both light & dark browser tabs -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgGrad)" stroke="url(#ringGrad)" stroke-width="2" />
+
+  <!-- Subtle Celestial aura circle behind cap -->
+  <circle cx="32" cy="31" r="22" stroke="#22d3ee" stroke-width="0.75" stroke-dasharray="2 3" opacity="0.3" />
+
+  <!-- Mortarboard Cap Skull Base (below diamond) -->
+  <path d="M22 33 C22 41.5 42 41.5 42 33 L42 38.5 C42 44 22 44 22 38.5 Z" fill="url(#capBase)" stroke="#fbbf24" stroke-width="0.8" />
+
+  <!-- Mortarboard Diamond Top (Isometric 3D perspective) -->
+  <polygon points="32,16 53,27 32,38 11,27" fill="url(#capGold)" stroke="#fef08a" stroke-width="1.2" stroke-linejoin="round" />
+
+  <!-- Cap Diamond Specular Highlight (Top facet sheen) -->
+  <polygon points="32,18 50,27 32,30.5 14,27" fill="#ffffff" opacity="0.35" />
+
+  <!-- Mortarboard Center Button -->
+  <circle cx="32" cy="27" r="2.75" fill="#fffbeb" stroke="#b45309" stroke-width="0.8" />
+
+  <!-- Hanging Tassel Cord swinging to the right -->
+  <path d="M32 27 C38 27.5 45 30 46.5 37" fill="none" stroke="#fde047" stroke-width="1.75" stroke-linecap="round" />
+  
+  <!-- Celestial Jade Bead on tassel -->
+  <circle cx="46.5" cy="37.5" r="1.8" fill="#22d3ee" stroke="#0891b2" stroke-width="0.6" />
+
+  <!-- Golden Tassel Brush/Fringe -->
+  <path d="M45 39.5 L48 39.5 L49.5 49.5 C49.5 50.5 43.5 50.5 43.5 49.5 Z" fill="url(#tasselGold)" stroke="#92400e" stroke-width="0.6" />
+
+  <!-- Celestial Sparkles / Stardust (✦) -->
+  <g filter="url(#celestialGlow)">
+    <!-- Top-right gold star -->
+    <path d="M49 11 Q49 14.5 52.5 14.5 Q49 14.5 49 18 Q49 14.5 45.5 14.5 Q49 14.5 49 11 Z" fill="#fde047" />
+    <!-- Bottom-left cyan star -->
+    <path d="M14 38 Q14 41 17 41 Q14 41 14 44 Q14 41 11 41 Q14 41 14 38 Z" fill="#22d3ee" opacity="0.9" />
+  </g>
+</svg>
